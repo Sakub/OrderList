@@ -1,4 +1,4 @@
-Vue.component('orders-wrapper',{
+Vue.component('orders-wrapper', {
     template: `
     <div>
         <div class="order" v-for="order in listOfOrders" :key="order.id" :class="{'order--active': order.active}" @click="selectOrder(order.id)">
@@ -12,10 +12,9 @@ Vue.component('orders-wrapper',{
         
     </div>
     `,
-    data(){
-        return{
-            listOfOrders:[
-                {
+    data() {
+        return {
+            listOfOrders: [{
                     name: 'Gaming mouse',
                     price: 70,
                     active: false,
@@ -31,14 +30,14 @@ Vue.component('orders-wrapper',{
             totalPrice: 0
         }
     },
-    methods:{
-        selectOrder(id){
-            for(let i=0; i<this.listOfOrders.length; i++){
-                if(this.listOfOrders[i].id === id){
-                    if(this.listOfOrders[i].active === false){
+    methods: {
+        selectOrder(id) {
+            for (let i = 0; i < this.listOfOrders.length; i++) {
+                if (this.listOfOrders[i].id === id) {
+                    if (this.listOfOrders[i].active === false) {
                         this.listOfOrders[i].active = true
                         this.totalPrice += this.listOfOrders[i].price
-                    }else{
+                    } else {
                         this.listOfOrders[i].active = false
                         this.totalPrice -= this.listOfOrders[i].price
                     }

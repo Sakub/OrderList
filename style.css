@@ -1,14 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
-body{
+body {
     height: 100vh;
     background: linear-gradient(90deg, #275453, #58C255);
 }
-.app{
+.app {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -18,14 +18,15 @@ body{
     border-radius: 25px;
     background: #fff;
 }
-.orderWrapper{
-    width:90%;
+.orderWrapper {
+    width: 90%;
+}
+.orderWrapper,
+.order {
     margin-left: auto;
     margin-right: auto;
 }
-.order{
-    margin-left: auto;
-    margin-right: auto;
+.order {
     background: #DF2626;
     width: 531px;
     height: 60px;
@@ -37,17 +38,17 @@ body{
     font-weight: bold;
     margin-bottom: 15px;
 }
-.order:hover{
+.order:hover {
     cursor: pointer;
 }
-.order--active{
+.order--active {
     background: #23CC3F;
 }
-.order__name{
+.order__name {
     flex: 0 90%;
     padding-left: 10px;
 }
-.app__header{
+.app__header {
     background: #347D8D;
     color: #fff;
     width: 302px;
@@ -63,20 +64,21 @@ body{
     font-size: 33px;
     font-weight: bold;
 }
-.totalPriceWrapper{
+.totalPriceWrapper {
     display: flex;
     position: absolute;
     bottom: 30px;
     width: 90%;
 }
-.totalPrice__text{
+.totalPrice__text,
+.totalPrice__price {
     flex: 0 50%;
 }
-.totalPrice__text, .totalPrice__price{
+.totalPrice__text,
+.totalPrice__price {
     font-size: 32px;
     font-weight: bold;
 }
-.totalPrice__price{
+.totalPrice__price {
     text-align: right;
-    flex: 0 50%;
 }
