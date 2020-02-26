@@ -34,13 +34,13 @@ Vue.component('orders-wrapper', {
         selectOrder(id) {
             for (let i = 0; i < this.listOfOrders.length; i++) {
                 if (this.listOfOrders[i].id === id) {
-                    if (this.listOfOrders[i].active === false) {
-                        this.listOfOrders[i].active = true
+                    if (!this.listOfOrders[i].active) {
                         this.totalPrice += this.listOfOrders[i].price
                     } else {
-                        this.listOfOrders[i].active = false
                         this.totalPrice -= this.listOfOrders[i].price
                     }
+                    this.listOfOrders[i].active = !this.listOfOrders[i].active
+                    break
                 }
             }
         }
